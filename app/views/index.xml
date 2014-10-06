@@ -1,0 +1,27 @@
+<Alloy>
+<Collection src="issuev2" />
+<Window class="container" onClose="cleanup">
+    <View id="header">
+        <Label id="title">Christian</Label>
+    </View>
+    <ScrollView id="library" backgroundColor="blue" class="body" layout="vertical" dataCollection="issuev2">
+        <View id="issuesList" model="{alloy_id}" onClick="alertModel">
+            <ImageView id="cover" image="{cover}" touchEnabled="false"></ImageView>
+            <Label id="date" text="{date}"  touchEnabled="false"></Label>
+            <Label id="summary" text="{summary}"  touchEnabled="false"></Label>
+            <View class="border" touchEnabled="false"></View>
+        </View>
+    </ScrollView>
+ <!--    <View id="store" class="body" layout="vertical" visible="false" backgroundColor="yellow">
+
+    </View>
+    <View id="footer">
+        <TabbedBar id="bottomNav" platform="ios" index="0" onClick="viewSelect">
+            <Labels>
+                <Label>Library</Label>
+                <Label>Store</Label>
+            </Labels>
+        </TabbedBar>
+    </View> -->
+</Window>
+</Alloy>
